@@ -12,11 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 public class Maincontroller {
 
+    // 메인 페이지
     @GetMapping (value = "/")
     public String Main(){
-
         return "Mainpage/Main";
     }
+
+
+
+
+
+
 
 
 }

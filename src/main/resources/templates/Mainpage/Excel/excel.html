@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>엑셀 업로드</title>
+</head>
+
+<body>
+
+<div>
+
+    <h2>
+        엑셀 데이터 자동 DB화를 위한 페이지입니다.
+    </h2>
+
+    <p>
+        ExcelService.saveExcel 메소드에 연결되어 있으며
+        엑셀의 1번 시트에 대해 2,3,5번째 셀에 대한 데이터를 DB화 시켜
+        결과값을 웹페이지에 표시합니다.
+    </p>
+
+
+</div>
+
+
+<form th:action="@{/excel/read}" method="POST" enctype="multipart/form-data">
+    <input type="file" th:name="file">
+    <input th:type="submit" value="제출" />
+</form>
+</body>
+
+</html>
